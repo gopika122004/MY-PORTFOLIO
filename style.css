@@ -1,0 +1,514 @@
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c0c0e5;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fffefe;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-color: #f2f2f2;
+    border-width: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: rgb(107, 107, 227);
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+/* General Section Styling */
+#home {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 50px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    overflow: hidden;
+  }
+  
+  #home .intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  #home .intro h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Social Container Styling */
+  .social-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 18px;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Social Links Styling */
+  .social-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .social-container span {
+    color: #ffffff; /* Separator style */
+  }
+  
+  /* Hover Effects */
+  .social-link:hover {
+    color: #ffd700; /* Gold color */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 15px rgba(255, 215, 0, 0.5);
+  }
+  
+  /* Animated Underline Effect */
+  .social-link::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background-color: #ffd700; /* Gold underline */
+    margin: 5px auto 0;
+    transition: width 0.3s ease;
+  }
+  
+  .social-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Sparkle Animation */
+  .sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("sparkles.png") repeat;
+    animation: sparkleAnimation 10s linear infinite;
+    pointer-events: none;
+    opacity: 0.6; /* Slight Transparency */
+  }
+  
+  @keyframes sparkleAnimation {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 1000px 1000px;
+    }
+  }
+  
+.skills-container, .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill, .project {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.skill i {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.skill:hover, .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    display: grid;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #444;
+}
+/* Sparkle effect */
+.sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+
+}
+
+.sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: sparkle 2s linear infinite;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(0) translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5) translateY(-50px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0) translateY(-100px);
+        opacity: 0;
+    }
+}
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(107, 107, 227, 0.8), 0 0 30px rgba(107, 107, 227, 0.6), 0 0 40px rgba(107, 107, 227, 0.4); /* Intense glow effect */
+    transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    width: 150px;  /* Fixed width for uniformity */
+    max-width: 150px;
+    animation: pulse 2s infinite; /* Add pulsating effect */
+}
+
+.skill img {
+    width: 60px;  /* Adjust image size */
+    height: 60px;  /* Adjust image size */
+    margin-bottom: 10px;
+}
+
+.skill p {
+    font-size: 14px;  /* Adjust font size for uniformity */
+}
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(107, 107, 227, 1), 0 0 50px rgba(107, 107, 227, 0.9), 0 0 70px rgba(107, 107, 227, 0.8); /* Enhanced glow */
+}
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 20px rgba(107, 107, 227, 0.8), 0 0 30px rgba(107, 107, 227, 0.6), 0 0 40px rgba(107, 107, 227, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(107, 107, 227, 1), 0 0 50px rgba(107, 107, 227, 0.9), 0 0 60px rgba(107, 107, 227, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(107, 107, 227, 0.8), 0 0 30px rgba(107, 107, 227, 0.6), 0 0 40px rgba(107, 107, 227, 0.4);
+    }
+}
+
+.contact-form {
+    background-color: #f2f2f2;  /* Light background */
+    border-radius: 10px;        /* Rounded corners */
+    padding: 20px;              /* Padding around form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Shadow for the form container */
+    width: 100%;                /* Full width */
+    max-width: 500px;           /* Maximum width */
+    margin: 0 auto;             /* Centering the form */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 20px);   /* Full width minus padding */
+    padding: 10px;             /* Padding for inputs/textarea */
+    margin-bottom: 15px;       /* Spacing between form elements */
+    border: 1px solid #ccc;    /* Light gray border */
+    border-radius: 5px;        /* Rounded corners for inputs/textarea */
+}
+
+.contact-form textarea {
+    height: 150px;              /* Height for message area */
+}
+
+.contact-form button {
+    width: 100%;                /* Full width for button */
+    background-color: #28a745;   /* Green background */
+    color: white;               /* White text */
+    padding: 10px;              /* Padding inside button */
+    border: none;               /* Remove border */
+    border-radius: 5px;         /* Rounded corners */
+    cursor: pointer;             /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+.contact-form button:hover {
+    background-color: #218838;  /* Darker green on hover */
+}
+#projects {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .project-card {
+    width: 250px; /* Fixed width for uniform size */
+    height: 350px; /* Fixed height for uniform size */
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 150px; /* Thumbnail image height */
+    object-fit: cover; /* Ensures the image fills the area without distortion */
+    border-bottom: 1px solid #ccc;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+  }
+  
+  .project-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 15px;
+  }
+  
+  .project-card .view-btn {
+    background-color: #6b6be3;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-card .view-btn:hover {
+    background-color: #5757d1;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-card:hover img {
+    transform: scale(1.1); /* Zoom effect for the image */
+  }
+  /* General Section Styling */
+#internships {
+  text-align: center;
+  color: rgb(252, 252, 252);
+  padding: 50px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+
+
+}
+
+#internships h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Hover effect */
+.internship-container:hover {
+  transform: scale(1.05); /* Slightly enlarges the container */
+  box-shadow: 0 6px 40px rgba(242, 245, 245, 0.6), 0 0 20px rgba(0, 255, 255, 0.8); /* Adds a glowing effect */
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px rgba(252, 252, 252, 0.5), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(243, 245, 245, 0.7), 0 0 40px rgba(0, 255, 255, 0.8), 0 0 60px rgba(0, 255, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(233, 144, 181, 0.5), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+  }
+}
+
+.internship-container {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  animation: glowing 2s infinite; /* Apply the glowing animation */
+  transition: transform 0.3s ease;
+}
+
+.internship-container img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(8, 8, 8, 0.6);
+}
+
+
+/* Hover effect for the thumbnail */
+.internship-container:hover img {
+  transform: scale(1.1); /* Slightly enlarges the thumbnail */
+  box-shadow: 0 4px 15px rgba(154, 119, 188, 0.8); /* Adds glow to the thumbnail */
+}
+
+
+/* Individual Internship Card */
+.internship {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* General Form Styling */
+form {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Input Fields Styling */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Input Focus Animation */
+form input:focus,
+form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 162, 255, 0.8), 0 0 20px rgba(0, 162, 255, 0.6);
+  transform: scale(1.02);
+}
+
+/* Submit Button Styling */
+form button {
+  background: linear-gradient(45deg, #1db954, #1ed760);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Submit Button Hover Effect */
+form button:hover {
+  background: linear-gradient(45deg, #1ed760, #1db954);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(30, 215, 96, 0.8), 0 0 25px rgba(30, 215, 96, 0.6);
+}
+
+/* Fade-in Animation for Form */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+  
+
+
